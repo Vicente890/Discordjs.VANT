@@ -7,8 +7,8 @@
 
 > Un repositorio sencillo donde podras aprender a hacer un bot de discord.js v13, menus, botones, interacciones, !Y mas¡
 
-[ ] Comandos en slashs
-[x] Comandos con prefijos
+|Comandos en slashs|[x] Comandos con prefijos|
+|--------|--------|
 [ ] Menus, Botones
 
 
