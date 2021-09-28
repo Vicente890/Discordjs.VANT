@@ -1,8 +1,4 @@
-# Codigo base de la version 12 de Discord.js
-&nbsp;
-### Esto va en index.js
-&nbsp;
-```js
+// Base para crear tu bot version 12
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require('config.js')
@@ -53,4 +49,3 @@ if(cmd){
 });
 
 client.login(token);
-```
