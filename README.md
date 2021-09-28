@@ -34,7 +34,9 @@ Esta no es una guía profesional ni mucho menos oficial de discord.js XD, solo s
                                     
 &nbsp;
 > Si quieres aprender a hacer un bot en la version 12
-> [Entra aqui](versiones/v12.md)
+
+[Entra aqui](versiones/v12.md)
 
 > Si quieres aprender a hacer un bot en la version 13
-> [Entra aqui](versiones/v13.md)
+
+[Entra aqui](versiones/v13.md)
