@@ -29,6 +29,8 @@ Esta no es una guía profesional ni mucho menos oficial de discord.js XD, solo s
 
 ### El C&P esta permitido, pero trata de entender lo maximo posible para seguir haciendo comandos con facilidad
 
+===========================================
+
 > Si quieres aprender a hacer un bot en la version 12
 > [Entra aqui](versiones/v12.md)
 
