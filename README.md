@@ -5,6 +5,8 @@
 
 ## !Bienvenido a la guia completa de Discord.js v12 y v13¡
 
+
+&nbsp;
 > Un repositorio sencillo donde podras aprender a hacer un bot de discord.js v13, menus, botones, interacciones, !Y mas¡
 
 |Opcion|Discord.js v12|Discord.js v13|
