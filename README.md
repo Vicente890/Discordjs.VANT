@@ -14,5 +14,6 @@
 |Cantidad de comandos|Las que quieras.|Como seria por slash, estos solo tienen limitados a ser **100**.|
 
 ```
-Recomendación: usar Discord.js V13```
+Recomendación: usar Discord.js V13
+```
 
