@@ -16,6 +16,5 @@
 ```
 Recomendación: usar Discord.js V13
 ```
-
-
+\newpage
 Esta no es una guía profesional ni mucho menos oficial de discord.js XD, solo soy un wey que sabe lo basico y quiere enseñarles.
