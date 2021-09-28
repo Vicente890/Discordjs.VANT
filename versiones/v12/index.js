@@ -9,7 +9,7 @@ const fs = require('fs')
 
 // handler con subcarpetas
 client.comandos = new Discord.Collection()
-
+//importante poner los comandos en subcarpetas osea: /comandos/subcarpeta/archivo.js
 const commandFolders = fs.readdirSync('./comandos');
 for (const folder of commandFolders) {
 const commandFiles = fs.readdirSync(`./comandos/${folder}`).filter(file => file.endsWith('.js'));
