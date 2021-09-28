@@ -11,5 +11,5 @@
 |--------|--------|--------|
 |Botones y menus|No hay, pero puedes hacerlos con un package.|ya estan agregados para crear en tu bot diectamente.|
 |Prefijos|Si es posible|No estara disponible *(si se puede, pero en el abril del 2022, agregaran un intent en el portal de developers de discord, donde checara cada mensaje del bot, y si tu bot esta verificado, tienes que pedir una solicitud para activar dicho intent, por lo tanto, los unicos comandos que podrian servir, serian los de slashs.)*|
-|Cantidad de coandos|Las que quieras.|Como seria por slash, estos solo tienen limitados a ser **100**.|
+|Cantidad de comandos|Las que quieras.|Como seria por slash, estos solo tienen limitados a ser **100**.|
 
