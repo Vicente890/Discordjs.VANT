@@ -21,6 +21,10 @@ Recomendación: usar Discord.js V13
 
 Esta no es una guía profesional ni mucho menos oficial de discord.js XD, solo soy un wey que sabe lo basico y quiere enseñarles.
 
+
+
+
+
 # Para empezar
 
 ### El C&P esta permitido, pero trata de entender lo maximo posible para seguir haciendo comandos con facilidad
