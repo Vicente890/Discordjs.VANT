@@ -1,5 +1,6 @@
 // Base para crear tu bot version 12
 const Discord = require("discord.js");
+const db = require('quick.db')
 const client = new Discord.Client();
 const config = require('config.js')
 const { token } = require('config.js')
