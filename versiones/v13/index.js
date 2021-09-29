@@ -1,3 +1,5 @@
+//al igual que en la version 12, en esta version se pueden hacer comandos con prefijos, pero como dije al inicio, llegara un intent, y sera mas recomendable hacer todo con slashes
+
 const fs = require('fs');
 const { Client, Collection, Intents, MessageEmbed, MessageActionRow, MessageSelectMenu } = require('discord.js');
 const { token } = require('./config.js');
