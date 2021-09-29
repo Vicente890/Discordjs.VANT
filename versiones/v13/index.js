@@ -39,7 +39,7 @@ client.on('messageCreate', (message) => {
   if(cmd){
   cmd.execute(client, message, args)
 	}
-
+})
   client.on('interactionCreate', async interaction => {
 	if (!interaction.isCommand()) return;
 	const command = client.slash.get(interaction.commandName);
