@@ -3,7 +3,7 @@ const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 const { clientId, token } = require('./config.js');
 
-const commands = [];
+const slashes = [];
 /*const commandFiles = fs.readdirSync('./slash').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
@@ -11,7 +11,14 @@ for (const file of commandFiles) {
 	commands.push(command.data.toJSON());
 }*/
 
-
+const slashFolders = fs.readdirSync('./slashes');
+for (const folder of slashFolders) {
+const slashFiles = fs.readdirSync(`./slashes/${folder}`).filter(file => file.endsWith('.js'));
+	for (const file of slashFiles) {
+		const command = require(`./slashes/${folder}/${file}`);
+  slashes.push(command.data.toJSON())
+}
+}
 
 
 const rest = new REST({ version: '9' }).setToken(token);
