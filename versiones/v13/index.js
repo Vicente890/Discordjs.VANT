@@ -43,4 +43,6 @@ client.on('messageCreate', (message) => {
 	}
 });
 	
+require('./slashes.js')	
+	
 	client.login(token)
