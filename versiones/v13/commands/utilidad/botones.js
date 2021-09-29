@@ -8,7 +8,7 @@ module.exports = {
   name: "botones",
   alias: [],
 
-execute (client, message, args) {
+async execute (client, message, args) {
   const embed = new MessageEmbed()
   .setAuthor('Soy un author', message.author.displayAvatarURL({ dynamic:true}))//el dynamic es para que si el avatar es animado, lo mande animado
   .setDescription('Embed de botones')
@@ -54,6 +54,29 @@ const botones = new MessageActionRow()
 					.setStyle('SECONDARY')//estilo del boton (este como es un disabled, no importara el color, solo ponlo y ya)
           .setDisabled(true)//aqui no se usa un custom id, si no, un link
 			);
-      const msg = message.reply({ content: `mensaje normal`, embeds: [embed], components: [botones, botones2] })
+      const msg = await message.reply({ content: `mensaje normal`, embeds: [embed], components: [botones, botones2] })
+
+const filter = i => i.user.id === message.author.id;
+
+      const collector = message.channel.createMessageComponentCollector({ filter, time: 15000 });
+
+collector.on('collect', async i => {
+	if (i.customId === 'azul') {
+    await i.deferUpdate();
+		await msg.edit({ content: '¡Se hizo clic en un botón!', components: [botones, botones2] });
+	}
+  if (i.customId === 'gris') {
+    await i.deferUpdate();
+		await msg.edit({ content: '¡Se hizo clic en otro botón! (2)', components: [botones, botones2] });
+	}
+  if (i.customId === 'verde') {
+    await i.deferUpdate();
+		await msg.edit({ content: '¡Se hizo clic en otro botón! (3)', components: [botones, botones2] });
+	}
+  if (i.customId === 'rojo') {
+    await i.deferUpdate();
+		await msg.edit({ content: '¡Se hizo clic en otro botón! (4)', components: [botones, botones2] });
+	}
+});
 }
 }
