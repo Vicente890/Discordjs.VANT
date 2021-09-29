@@ -23,7 +23,7 @@ async () => {
     console.log('Empezando a actuliazar comandos de barra.');
 		await rest.put(
 			Routes.applicationCommands(clientId),
-			{ body: commands },
+			{ body: slashes },
 		);
 
 		console.log('Comandos de barra listos!');
