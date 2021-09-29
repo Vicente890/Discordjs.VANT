@@ -4,12 +4,14 @@ const { Routes } = require('discord-api-types/v9');
 const { clientId, token } = require('./config.js');
 
 const commands = [];
-const commandFiles = fs.readdirSync('./slash').filter(file => file.endsWith('.js'));
+/*const commandFiles = fs.readdirSync('./slash').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
 	const command = require(`./slash/${file}`);
 	commands.push(command.data.toJSON());
-}
+}*/
+
+
 
 const rest = new REST({ version: '9' }).setToken(token);
 
