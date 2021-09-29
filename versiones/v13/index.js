@@ -42,3 +42,5 @@ client.on('messageCreate', (message) => {
 		return interaction.reply({ content: '¡Hubo un error al ejecutar este comando!', ephemeral: true });
 	}
 });
+	
+	client.login(token)
