@@ -19,6 +19,15 @@ const commandFiles = fs.readdirSync(`./slashes/${folder}`).filter(file => file.e
 }
 }
 
+const commandFolders = fs.readdirSync('./comandos');
+for (const folder of commandFolders) {
+const commandFiles = fs.readdirSync(`./comandos/${folder}`).filter(file => file.endsWith('.js'));
+	for (const file of commandFiles) {
+		const command = require(`./comandos/${folder}/${file}`);
+  client.comandos.set(command.name, command)
+}
+}
+
 // MessageCreate
 client.on('messageCreate', (message) => {
 	if (!message.content.toLowerCase().startsWith(prefix)) return; 
