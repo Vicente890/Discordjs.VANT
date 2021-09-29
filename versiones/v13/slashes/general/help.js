@@ -21,7 +21,7 @@ const embed = new MessageEmbed()
                         label: 'General',
                         description: 'Descripcion de la seleccion',
                         value: 'general',
-                        emoji: 🍇',
+                        emoji:'🍇',
                     },
                     {
                         label: 'Owners',
@@ -44,68 +44,14 @@ const embed = new MessageEmbed()
                     {
                      label: 'Otro 2',
                         description: 'la verdad no se cuanto es el limite para las opciones pero si jala uwu',
-                        value: 'otro2',
+                        value: 'otroxd',
                         emoji: '💙',
                     }
                 ]),
         );
-		const mensaje = await interaction.reply({ ephemeral: true, embeds: [embed] });
+		const mensaje = await interaction.reply({ ephemeral: false, embeds: [embed], components: [row] });
 		
-		 const filter = i => i.user.id === interaction.user.id;
-
-    const collector = interaction.channel.createMessageComponentCollector({ filter });
-
-    collector.on('collect', async i => {
-    if (i.values[0] === 'general') {
-    await i.deferUpdate();
-    
-	    const emb = new MessageEmbed()
-.setAuthor('Help', interaction.user.displayAvatarURL())
-.setDescription(`Bienvenido a la pagina 1`)
-.setColor('RANDOM')
-    mensaje.edit({ embeds: [emb] })
-    }
-
-    if (i.values[0] === 'owners') {
-    await i.deferUpdate();
-    const emb = new MessageEmbed()
-.setAuthor('Help', interaction.user.displayAvatarURL())
-.setDescription(`Bienvenido a la pagina 2`)
-.setColor('RANDOM')
-    mensaje.edit({ embeds: [emb] })
-    }
-	    
-	    if (i.values[0] === 'diversion') {
-    await i.deferUpdate();
-    
-    const emb = new MessageEmbed()
-.setAuthor('Help', interaction.user.displayAvatarURL())
-.setDescription(`Bienvenido a la pagina 3`)
-.setColor('RANDOM')
-    mensaje.edit({ embeds: [emb] })
-    }
-
-if (i.values[0] === 'otro') {
-    await i.deferUpdate();
-    
-    const emb = new MessageEmbed()
-.setAuthor('Help', interaction.user.displayAvatarURL())
-.setDescription(`Bienvenido a la pagina 4`)
-.setColor('RANDOM')
-    mensaje.edit({ embeds: [emb] })
-    }	    
-	    
-	if (i.values[0] === 'otro2') {
-    await i.deferUpdate();
-    
-    const emb = new MessageEmbed()
-.setAuthor('Help', interaction.user.displayAvatarURL())
-.setDescription(`Bienvenido a la pagina 5`)
-.setColor('RANDOM')
-    mensaje.edit({ embeds: [emb] })
-    }    
-	    
-    });
+		 
 
 	},
 };
