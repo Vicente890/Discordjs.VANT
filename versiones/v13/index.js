@@ -1,5 +1,3 @@
-//al igual que en la version 12, en esta version se pueden hacer comandos con prefijos, pero como dije al inicio, llegara un intent, y sera mas recomendable hacer todo con slashes
-
 const fs = require('fs');
 const { Client, Collection, Intents, MessageEmbed, MessageActionRow, MessageSelectMenu } = require('discord.js');
 const { token } = require('./config.js');
@@ -83,7 +81,7 @@ const filter = i => i.user.id === interaction.user.id;
                         label: 'General',
                         description: 'Descripcion de la seleccion',
                         value: 'general',
-                        emoji:'🍇',
+                        emoji: '🍇',
                     },
                     {
                         label: 'Owners',
@@ -114,6 +112,7 @@ const filter = i => i.user.id === interaction.user.id;
 
         //opciones del menu 1 (help)
     if (i.values[0] === 'general') {
+      try{
     await i.deferUpdate();
     
 	    const emb = new MessageEmbed()
@@ -121,9 +120,17 @@ const filter = i => i.user.id === interaction.user.id;
 .setDescription(`Bienvenido a la pagina 1`)
 .setColor('RANDOM')
     i.editReply({ embeds: [emb], components: [row] })
+      } catch (e) {
+        const emb = new MessageEmbed()
+.setAuthor('Help', interaction.user.displayAvatarURL())
+.setDescription(`Bienvenido a la pagina 1`)
+.setColor('RANDOM')
+       i.editReply({ embeds: [emb], components: [row]})
+      }
     }
 
     if (i.values[0] === 'owners') {
+      try{
     await i.deferUpdate();
     
     const emb = new MessageEmbed()
@@ -131,18 +138,35 @@ const filter = i => i.user.id === interaction.user.id;
 .setDescription(`Bienvenido a la pagina 2`)
 .setColor('RANDOM')
     i.editReply({ embeds: [emb], components: [row] })
+    } catch (e) {
+      const emb = new MessageEmbed()
+.setAuthor('Help', interaction.user.displayAvatarURL())
+.setDescription(`Bienvenido a la pagina 2`)
+.setColor('RANDOM')
+        i.editReply({ embeds: [emb], components: [row]})
+      }
     }
 	    
 	    if (i.values[0] === 'diversion') {
+        try{
     await i.deferUpdate();
     const emb = new MessageEmbed()
 .setAuthor('Help', interaction.user.displayAvatarURL())
 .setDescription(`Bienvenido a la pagina 3`)
 .setColor('RANDOM')
     i.editReply({ embeds: [emb], components: [row] })
-    }
+  
+    } catch (e) {
+      const emb = new MessageEmbed()
+.setAuthor('Help', interaction.user.displayAvatarURL())
+.setDescription(`Bienvenido a la pagina 3`)
+.setColor('RANDOM')
+        i.editReply({ embeds: [emb], components: [row]})
+      }
+      }
 
 if (i.values[0] === 'otro') {
+  try{
     await i.deferUpdate();
     
     const emb = new MessageEmbed()
@@ -150,9 +174,18 @@ if (i.values[0] === 'otro') {
 .setDescription(`Bienvenido a la pagina 4`)
 .setColor('RANDOM')
    i.editReply({ embeds: [emb], components: [row] })
+
+   } catch (e) {
+     const emb = new MessageEmbed()
+.setAuthor('Help', interaction.user.displayAvatarURL())
+.setDescription(`Bienvenido a la pagina 4`)
+.setColor('RANDOM')
+        i.editReply({ embeds: [emb] , components: [row]})
+      }
     }	    
 	    
 	if (i.values[0] === 'otroxd') {
+    try{
     await i.deferUpdate();
     
     const emb = new MessageEmbed()
@@ -160,6 +193,13 @@ if (i.values[0] === 'otro') {
 .setDescription(`Bienvenido a la pagina 5`)
 .setColor('RANDOM')
     i.editReply({ embeds: [emb], components: [row] })
+    } catch (e) {
+      const emb = new MessageEmbed()
+.setAuthor('Help', interaction.user.displayAvatarURL())
+.setDescription(`Bienvenido a la pagina 5`)
+.setColor('RANDOM')
+        i.editReply({ embeds: [emb], components: [row]})
+      }
     }    
 	    
     });
