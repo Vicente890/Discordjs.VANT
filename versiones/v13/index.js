@@ -1,6 +1,8 @@
 const fs = require('fs');
 const { Client, Collection, Intents, MessageEmbed, MessageActionRow, MessageSelectMenu } = require('discord.js');
-const { token, prefix } = require('./config.js');
+const { token } = require('./config.js');
+const config = require('./config.js')
+const prefix = config.prefix;
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 client.on('ready', () => {
@@ -35,7 +37,7 @@ client.on('messageCreate', (message) => {
 	const args = message.content.slice(prefix.length).trim().split(/ +/g);
 	const command = args.shift();
 
-  let cmd = client.cmds.find((c) => c.name.toLowerCase() === command || c.alias && c.alias.includes(command));
+  let cmd = client.comandos.find((c) => c.name.toLowerCase() === command || c.alias && c.alias.includes(command));
   if(cmd){
   cmd.execute(client, message, args)
 	}
