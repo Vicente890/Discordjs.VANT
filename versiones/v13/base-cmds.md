@@ -14,4 +14,5 @@ module.exports = {
 execute (client, message, args){
 //aqui tu codigo
 }
-}```
+}
+```
