@@ -4,6 +4,7 @@
 
 ```js
 const Discord = require("discord.js");
+const db = require('quick.db');
 const { Client, MessageEmbed, Intents } = require("discord.js");
 const client = new Client();
 
