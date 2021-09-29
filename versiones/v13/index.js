@@ -1,6 +1,6 @@
 const fs = require('fs');
 const { Client, Collection, Intents, MessageEmbed } = require('discord.js');
-const { token, prefix, ownerId, colorP } = require('./config.js');
+const { token, prefixP } = require('./config.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 client.on('ready', () => {
