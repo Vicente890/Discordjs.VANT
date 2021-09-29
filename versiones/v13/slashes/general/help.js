@@ -8,8 +8,8 @@ module.exports = {
 	async execute(interaction) {
 
 const embed = new MessageEmbed()
-.setAuthor('Help', interaction.author.displayAvatarURL())
-.setDescription(`Bienvenido a mi lista de comandos ${interaction.author}\nAqui podras encontrar todos mis comandos :D`)
+.setAuthor('Help', interaction.user.displayAvatarURL())
+.setDescription(`Bienvenido a mi lista de comandos ${interaction.user}\nAqui podras encontrar todos mis comandos :D`)
 .setColor('RANDOM')
  const row = new MessageActionRow()
         .addComponents(
@@ -60,7 +60,7 @@ const embed = new MessageEmbed()
     await i.deferUpdate();
     await wait(1000);
 	    const emb = new MessageEmbed()
-.setAuthor('Help', interaction.author.displayAvatarURL())
+.setAuthor('Help', interaction.user.displayAvatarURL())
 .setDescription(`Bienvenido a la pagina 1`)
 .setColor('RANDOM')
     mensaje.edit({ embeds: [emb] })
@@ -70,7 +70,7 @@ const embed = new MessageEmbed()
     await i.deferUpdate();
     await wait(1000);
     const emb = new MessageEmbed()
-.setAuthor('Help', interaction.author.displayAvatarURL())
+.setAuthor('Help', interaction.user.displayAvatarURL())
 .setDescription(`Bienvenido a la pagina 2`)
 .setColor('RANDOM')
     mensaje.edit({ embeds: [emb] })
@@ -80,7 +80,7 @@ const embed = new MessageEmbed()
     await i.deferUpdate();
     await wait(1000);
     const emb = new MessageEmbed()
-.setAuthor('Help', interaction.author.displayAvatarURL())
+.setAuthor('Help', interaction.user.displayAvatarURL())
 .setDescription(`Bienvenido a la pagina 3`)
 .setColor('RANDOM')
     mensaje.edit({ embeds: [emb] })
@@ -90,7 +90,7 @@ if (i.values[0] === 'otro') {
     await i.deferUpdate();
     await wait(1000);
     const emb = new MessageEmbed()
-.setAuthor('Help', interaction.author.displayAvatarURL())
+.setAuthor('Help', interaction.user.displayAvatarURL())
 .setDescription(`Bienvenido a la pagina 4`)
 .setColor('RANDOM')
     mensaje.edit({ embeds: [emb] })
@@ -100,7 +100,7 @@ if (i.values[0] === 'otro') {
     await i.deferUpdate();
     await wait(1000);
     const emb = new MessageEmbed()
-.setAuthor('Help', interaction.author.displayAvatarURL())
+.setAuthor('Help', interaction.user.displayAvatarURL())
 .setDescription(`Bienvenido a la pagina 5`)
 .setColor('RANDOM')
     mensaje.edit({ embeds: [emb] })
