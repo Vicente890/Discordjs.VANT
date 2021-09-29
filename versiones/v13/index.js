@@ -10,10 +10,10 @@ client.on('ready', () => {
 client.slashes = new Collection();
 client.comandos = new Collection()
 
-const commandFolders = fs.readdirSync('./slashes');
-for (const folder of commandFolders) {
-const commandFiles = fs.readdirSync(`./slashes/${folder}`).filter(file => file.endsWith('.js'));
-	for (const file of commandFiles) {
+const slashFolders = fs.readdirSync('./slashes');
+for (const folder of slashFolders) {
+const slashFiles = fs.readdirSync(`./slashes/${folder}`).filter(file => file.endsWith('.js'));
+	for (const file of slashFiles) {
 		const command = require(`./slashes/${folder}/${file}`);
   client.slashes.set(command.data.name, command)
 }
