@@ -11,8 +11,8 @@ module.exports = {
 execute (client, message, args){
 
 const ping = new MessageEmbed()//el nombre de este const no importa, puedes ponerle como quieras
-.setAuthor(`¡Mi ping!`, interaction.client.user.displayAvatarURL())
-.setDescription("**🤖 `|` Bot**: "+ Math.floor(interaction.createdTimestamp - Date.now()) +"\n**🏐 `|` Api**: " + interaction.client.ws.ping)
+.setAuthor(`¡Mi ping!`, client.user.displayAvatarURL())
+.setDescription("**🤖 `|` Bot**: "+ Math.floor(message.createdTimestamp - Date.now()) +"\n**🏐 `|` Api**: " + client.ws.ping)
 .setColor('D978BC')
 message.channel.send({ embeds: [ping] })
 }
