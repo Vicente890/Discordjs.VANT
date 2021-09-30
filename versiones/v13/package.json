@@ -19,6 +19,7 @@
     "express": "^4.17.1",
     "ms": "^3.0.0-canary.1",
     "sourcebin": "^4.2.5",
+    "megadb": "^3.4.0",
     "weky": "^3.1.8"
   },
   "devDependencies": {
